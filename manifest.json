@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "name": "HelpMeOut",
+    "description": "Records your screen in real time",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "icons": {
+        "16": "images/helpmeout-favicon.png",
+        "32": "images/helpmeout-favicon.png",
+        "48": "images/helpmeout-favicon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["/images/*"],
+            "matches": ["http://*/*", "https://*/*"]
+            
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="images/helpmeout-favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpMeOut</title>
+  </head>
+  <body>
+    <section class="pop_up">
+      <header>
+        <div class="head">
+          <div class="logo">
+            <img src="images/helpmeout-logo.svg" alt="HelpMeOut Logo" />
+          </div>
+
+          <div class="settings_close_btns">
+            <img src="images/settings-icon.svg" alt="settings" />
+
+            <div class="close_icon">
+              <div class="burger_bar_class"></div>
+              <div class="burger_bar_class"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text">
+          This extension helps you record and share help videos with ease.
+        </p>
+        <p class="error" id="error"></p>
+      </header>
+      <form class="options">
+        <div class="screen_options">
+          <div class="fullscreen">
+            <img src="images/fullscreen.svg" alt="Full Screen Icon" />
+            <span>Full screen</span>
+          </div>
+          <div class="current_tab">
+            <img src="images/tab.svg" alt="Current Tab Icon" />
+            <span>Current Tab</span>
+          </div>
+        </div>
+
+        <label htmlFor="camera" class="camera">
+          <div class="icon">
+            <img src="images/camera.svg" alt="Video Icon" />
+            <span>Camera</span>
+          </div>
+          <div class="check_btn">
+            <input name="camera" id="camera" type="checkbox" />
+            <span class="slider"></span>
+          </div>
+        </label>
+        <label htmlFor="audio" class="audio">
+          <div class="icon">
+            <img src="images/audio.svg" alt="Microphone Icon" />
+            <span>Audio</span>
+          </div>
+          <div class="check_btn">
+            <input name="audio" id="audio" type="checkbox" />
+            <span class="slider"></span>
+          </div>
+        </label>
+        <button id="btn">Start Recording</button>
+        <button id="stopbtn">Stop Recording</button>
+      </form>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

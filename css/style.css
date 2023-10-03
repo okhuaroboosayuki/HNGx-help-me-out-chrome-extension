@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --global-font: "Work Sans", sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--global-font);
+}
+
+.pop_up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.head {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  height: 1.75rem;
+  width: 8.75rem;
+}
+
+.settings_close_btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.settings_close_btns img {
+  cursor: pointer;
+}
+
+.close_icon {
+  width: 12px;
+  cursor: pointer;
+  border: 1px solid #b6b3c6;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.burger_bar_class:nth-child(1) {
+  transform: rotate(45deg) translate(9.2px, 3.8px);
+  width: 50%;
+  height: 1px;
+  background-color: #b6b3c6;
+}
+
+.burger_bar_class:nth-child(2) {
+  transform: rotate(-45deg) translate(-2.8px, 8.6px);
+  width: 50%;
+  height: 1px;
+  background-color: #b6b3c6;
+}
+
+.text {
+  color: #413c6d;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 2rem;
+  width: 240px;
+}
+
+.error{
+  display: none;
+  color: red;
+  background-color: rgb(255, 186, 186);
+  font-weight: 500;
+  line-height: 1rem;
+  font-size: .8rem;
+  padding: .5rem;
+  border-radius: 5px;
+  transition: .8s all ease-in-out;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.screen_options {
+  align-self: stretch;
+  display: flex;
+  padding: 0rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fullscreen,
+.current_tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.camera,
+.audio {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border: 1px solid #100a42;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  color: #100a42;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon span {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.check_btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 2.25rem;
+  height: 1.25rem;
+}
+
+.check_btn input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check_btn input:checked+.slider {
+  background-color: #120b48;
+}
+
+.check_btn input:checked+.slider::before {
+  transform: translateX(15px);
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.75rem;
+  padding: 0.125rem;
+  background-color: #413C6D;
+  transition: 0.3s all ease-in-out;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  bottom: 2px;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  transition: 0.3s all ease-in-out;
+}
+
+button {
+  outline: none;
+  background-color: #120b48;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: #fafdff;
+  cursor: pointer;
+  align-self: stretch;
+  border: 1px solid #120b48;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: 0.6s all ease-in-out;
+
+}
+
+button:hover {
+  background-color: #413c6d;
+}
