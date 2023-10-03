@@ -1,5 +1,3 @@
-
-
 var recorder = null
 var isAudioEnabled = true;
 var isVideoEnabled = true;
@@ -33,6 +31,52 @@ function onApproved(stream) {
         document.body.removeChild(a);
 
         URL.revokeObjectURL(url);
+
+        // create a function that converts the video from webm to mp4, then send to an api
+        // const reader = new FileReader();
+        // reader.readAsDataURL(recordedBlob);
+        // reader.onloadend = function () {
+        //     const base64data = reader.result;
+        //     console.log(base64data);
+        //     fetch("https://hng-task-two.afundcap.com/public/api/save_video", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({
+        //             video: base64data
+        //         })
+        //     }).then((res) => {
+        //         console.log(res);
+        //     }).catch((err) => {
+        //         console.log(err);
+        //     })
+        // }
+
+        // const formData = new FormData();
+        // formData.append("video", recordedBlob);
+        // fetch("http://localhost:5000/api/upload", {
+        //     method: "POST",
+        //     body: formData
+        // }).then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err);
+        // })
+
+        // fetch("http://localhost:5000/api/upload", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({
+        //         video: recordedBlob
+        //     })
+        // }).then((res) => {
+        //     console.log(res);
+        // }).catch((err) => {
+        //     console.log(err);
+        // })
     }
 }
 
